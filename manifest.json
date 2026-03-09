@@ -20,8 +20,10 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "filmhuis-calendar-ics@panjii",
-      "strict_min_version": "68.0"
+      "strict_min_version": "68.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
-  },
-  "data_collection_permissions": []
+  }
 }
