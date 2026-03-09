@@ -22,5 +22,6 @@
       "id": "filmhuis-calendar-ics@panjii",
       "strict_min_version": "68.0"
     }
-  }
+  },
+  "data_collection_permissions": []
 }
