@@ -1,0 +1,40 @@
+/* Filmhuis ICS addon styles */
+
+#fhics-import-all-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  margin: 10px 0 14px 0;
+  background: #1a1a2e;
+  border-left: 4px solid #e94560;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #eee;
+}
+
+.fhics-btn {
+  padding: 4px 10px;
+  background: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+#fhics-import-all-bar .fhics-btn {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+.fhics-btn:hover {
+  background: #c73652;
+}
+
+.fhics-cell {
+  vertical-align: middle;
+  white-space: nowrap;
+}
