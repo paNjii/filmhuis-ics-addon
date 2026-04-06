@@ -1,8 +1,10 @@
 /* Filmhuis Den Haag → Calendar – content.js */
 "use strict";
 
-if (!document.body.innerText.includes("Order history")) {
-  throw new Error("filmhuis-ics: not an order history page, skipping.");
+const bodyText = document.body.innerText;
+if (!bodyText.includes("Order history") && !bodyText.includes("Bestelgeschiedenis")) {
+  // Not an order history page — nothing to do.
+  return;
 }
 
 const LOCATION = "Filmhuis Den Haag\\, Spui 191\\, 2511 BN Den Haag\\, Netherlands";
