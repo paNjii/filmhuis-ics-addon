@@ -184,7 +184,7 @@ function injectButtons() {
     td.appendChild(makeBtn("📅 Calendar", () => {
       const ics  = buildICS([ev]);
       const safe = ev.title.replace(/[^a-z0-9]/gi, "_").slice(0, 40);
-      downloadICS(`${safe}.ics`, ics);
+      downloadICS(`${safe}_${ev.start.getFullYear()}.ics`, ics);
     }));
     tr.appendChild(td);
 
@@ -221,7 +221,8 @@ function ensureImportAllBar() {
   const btn = makeBtn("⬇ Import all as .ics", () => {
     const events = collectAllEvents();
     if (!events.length) { alert("No events found on this page."); return; }
-    downloadICS("filmhuis_all.ics", buildICS(events));
+    const year = events[0].start.getFullYear();
+    downloadICS(`filmhuis_${year}.ics`, buildICS(events));
   });
   bar.appendChild(label);
   bar.appendChild(btn);
