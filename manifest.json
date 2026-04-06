@@ -11,7 +11,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.filmhuisdenhaag.nl/*"],
+      "matches": ["*://filmhuisdenhaag.nl/*", "*://*.filmhuisdenhaag.nl/*"],
       "js": ["content.js"],
       "css": ["style.css"],
       "run_at": "document_idle"
