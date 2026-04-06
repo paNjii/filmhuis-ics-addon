@@ -1,19 +1,15 @@
 /* Filmhuis Den Haag → Calendar – content.js
  *
- * Injected by the browser on any filmhuisdenhaag.nl page.
- * Exits silently if this is not an order history page.
+ * Injected by the browser into every frame on filmhuisdenhaag.nl (and
+ * subdomains such as activetickets.filmhuisdenhaag.nl).  The order history
+ * lives inside an iframe on that subdomain and its rows are loaded
+ * dynamically via XHR — the MutationObserver below handles that.
+ * On frames without an #OrderHistory table this script is a no-op.
  */
 // noinspection SpellCheckingInspection
 
 (function () {
 "use strict";
-
-// Support both the English and Dutch page title so the extension works
-// regardless of the site's language setting.
-const bodyText = document.body.innerText;
-if (!bodyText.includes("Order history") && !bodyText.includes("Bestelgeschiedenis")) {
-  return;
-}
 
 // ---------------------------------------------------------------------------
 // Constants
