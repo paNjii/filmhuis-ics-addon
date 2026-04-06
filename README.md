@@ -6,7 +6,7 @@ A Firefox extension that adds `.ics` export buttons to your [Filmhuis Den Haag](
 
 - **Per-row button** — export a single screening as a `.ics` file
 - **Import all** — export all visible screenings in one `.ics` file
-- Activates on any page that contains an order history table (ActiveTickets-based sites)
+- Activates only on `filmhuisdenhaag.nl` (any subdomain) when the page contains an order history table
 - ICS output includes title, date/time, location, and zaal — DST-aware (Europe/Amsterdam)
 
 ## Screenshot
