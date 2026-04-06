@@ -1,9 +1,9 @@
 /* Filmhuis Den Haag → Calendar – content.js */
+(function () {
 "use strict";
 
 const bodyText = document.body.innerText;
 if (!bodyText.includes("Order history") && !bodyText.includes("Bestelgeschiedenis")) {
-  // Not an order history page — nothing to do.
   return;
 }
 
@@ -173,3 +173,4 @@ observer.observe(document.getElementById("OrderHistory") || document.body, {
   subtree:   true,
 });
 injectButtons();
+}());
